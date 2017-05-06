@@ -1,4 +1,4 @@
-FROM java:8-alpine
+FROM openjdk:8-jre-alpine
 MAINTAINER lw6c@qq.com
 RUN apk add --update ca-certificates wget && update-ca-certificates && rm -rf /var/cache/apk/*
 RUN mkdir node && cd node && wget https://github.com/alibaba/otter/releases/download/otter-4.2.13/node.deployer-4.2.13.tar.gz && tar -xzf node.deployer-4.2.13.tar.gz && rm node.deployer-4.2.13.tar.gz
